@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body{
+  background-color: #0a192f;
+}
+.About-intro{
+  color:#64ffda;
+  float: inline;
+}
+.my-pic{
+  margin-left: 15px;
+  /* filter: grayscale(5); */
+  /* filter: sepia(100%); */
+  opacity: 0.5;
+  border-radius: 50%;
+
+}
+.my-pic:hover{
+  /* filter: sepia(0%); */
+  opacity: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* ////// */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.form{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.already{
+  padding-top: 6px;
+}
+/* #hover:hover{
+  background-color: rgb(98, 184, 98);
+} */
+body{
+  margin-top:20px;
+  /* background-color: #f2f3f8; */
+  /* background: url(https://source.unsplash.com/1600x900/?coding,code); */
+}
+.card {
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);
+}
+.h2{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.lead{
+  color: white;
 }
+label{
+  font-weight: 900;
+}
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  /* background-color: #fff; */
+  background-clip: border-box;
+  border: 1px solid #000000;
+  border-radius: .2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+#links .me-4{
+  text-decoration: none;
+}
+.btn-lg::before{
+  height: 0%;
+  width: 2px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.btn-lg:hover {
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
