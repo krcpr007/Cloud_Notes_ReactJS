@@ -8,7 +8,7 @@ const port = 5000
 app.use(cors())
 app.use(express.json())
 app.get('/', (req, res) => {
-  res.send('Hello Sir !')
+  res.send('Hello Sir You are connected to server!')
 })
  
 //availble routes
