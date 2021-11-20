@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 export const Footer = () => {
     return (
         <div>
-            <footer className=" text-center text-lg-start mt-5" style={{ background: "#64ffda", color: "#0a192f" }}>
+            <footer className="footer text-center text-lg-start mt-5" style={{ background: "#64ffda", color: "#0a192f" }}>
         {/* <!-- Grid container --> */}
-            <div className ="container p-4">
+            <div className ="footer container p-4">
         {/* <!--Grid row--> */}
             <div className ="row">
         {/* <!--Grid column--> */}
-            <div className ="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <div className ="footer col-lg-6 col-md-12 mb-4 mb-md-0">
             <h5 className ="">iNote</h5>
 
             <p>
@@ -21,7 +21,7 @@ export const Footer = () => {
         {/* <!--Grid column--> */}
 
         {/* <!--Grid column--> */}
-            <div className ="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <div className ="footer col-lg-6 col-md-12 mb-4 mb-md-0">
             <h5 className ="text-uppercase">Footer text</h5>
 
             <p>
@@ -35,10 +35,6 @@ export const Footer = () => {
         {/* <!--Grid row--> */}
             </div>
         {/* <!-- Grid container --> */}
-
-
-
-
             <div className ="container p-4 pb-0">
         {/* <!-- Section: CTA --> */}
             <section className ="">
@@ -56,7 +52,7 @@ export const Footer = () => {
         {/* <!-- Copyright --> */}
             <div className ="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
             © 2020 Copyright:
-            <a style={{color:"#0a192f"}} href="">Rajan Kumar</a>
+            <Link style={{color:"#0a192f"}} to="">Rajan Kumar</Link>
             </div>
         {/* <!-- Copyright --> */}
             </footer>
