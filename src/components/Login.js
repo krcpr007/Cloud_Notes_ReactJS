@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 const host = "http://localhost:5000";
-export const Login = () => {
+export const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let history = useHistory();
 
@@ -22,10 +22,11 @@ export const Login = () => {
     console.log(json);
     if (json.success) {
       // Save the auth token and redirect
-      localStorage.setItem("token", json.authtoken);
+      localStorage.setItem("auth-token", json.authToken);
+      props.showAlert("Loged in Successfully", "success");
       history.push("/");
     } else {
-      alert("Invalid credentials");
+      props.showAlert("Invalid Details", "danger");
     }
   };
 
@@ -33,34 +34,24 @@ export const Login = () => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
   return (
-    <div className="container h-100">
+    <div className="container login">
       <div className="row h-100">
         <div className="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
           <div className="d-table-cell align-middle">
             <div className="text-center mt-5">
-              <h1 className="h2" style={{ color: "#64ffda" }}>
-                &Iacute;&Ntilde;otes
-              </h1>
-              <p className="lead" style={{ color: "#64ffda" }}>
-                Welcome to iNote claoud based save Notes
-              </p>
+              <h1 className="h1">&Iacute;&Ntilde;otes</h1>
+              <p>Welcome to iNote claoud based save notes</p>
             </div>
             <div className="card">
               <div className="card-body">
-                <div className="m-sm-4" style={{ color: "#64ffda" }}>
+                <div className="m-sm-4">
                   <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                       <label htmlFor="email" className="form-label">
-                        Email address
+                      Your Email 
                       </label>
                       <input
                         type="email"
-                        style={{
-                          border: "none",
-                          borderBottom: "2px solid #64ffda",
-                          backgroundColor: "#0a192f",
-                          color: "#64ffda",
-                        }}
                         className="form-control"
                         id="email"
                         name="email"
@@ -68,7 +59,8 @@ export const Login = () => {
                         onChange={onChange}
                         placeholder="Email"
                         aria-describedby="emailHelp"
-                z      />
+                        z
+                      />
                     </div>
                     <div className="mb-3">
                       <label htmlFor="password" className="form-label">
@@ -76,12 +68,6 @@ export const Login = () => {
                       </label>
                       <input
                         type="password"
-                        style={{
-                          border: "none",
-                          borderBottom: "2px solid #64ffda",
-                          backgroundColor: "#0a192f",
-                          color: "#64ffda",
-                        }}
                         className="form-control"
                         placeholder="password"
                         value={credentials.password}
@@ -105,7 +91,7 @@ export const Login = () => {
                     </div>
                     <p>
                       Don't have account{" "}
-                      <Link style={{ color: "#64ffda" }} to="/signup">
+                      <Link style={{ color: "#64ffda", textDecoration:"none" }} to="/signup">
                         Sign Up
                       </Link>{" "}
                     </p>
