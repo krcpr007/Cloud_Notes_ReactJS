@@ -1,27 +1,27 @@
 import React from "react";
 export const About = () => {
   return (
-    <div className="container about-bg mt-5">
-      <h1 className="text-center m-2" style={{ color: "#64ffda" }}>
-        Welcome to iNote
-      </h1>
-      <div className="img-fluid">
-        <img
-          className="my-pic img-fluid d-flex justify-content-sm-center"
-          src="https://media-exp1.licdn.com/dms/image/C4D03AQF27_okMDcJVw/profile-displayphoto-shrink_800_800/0/1621483176011?e=1642636800&v=beta&t=GYEZWyKByC0S6B9j0RUkoxug3Q8bq-imfwzGxtgon2A"
-          alt="Developer pic"
-          width="320px"
-        />
-      </div>
-      <div className="About-intro mt-2 ">
-        Hii, My name is
-        <h1>
-          Rajan Kumar.
-          <br />I build things for the web.
-        </h1>
-        I’m a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I’m focused on
-        building accessible, human-centered products at Upstatement.
+    <div className="about mt-3">
+      <h1 className="text-center m-2">Welcome to ÍÑotes</h1>
+      <div className="container">
+        <h3 style={{ color: "#64ffda" }}>About</h3>
+        <hr />
+        <p>
+        Basically, it's a cloud-based note-taking web app where you can note
+          down your important notes and save them to the cloud it is fully
+          secure to use nobody can see your Notes. It is a very secure cloud note
+          saving service as you think.
+        </p>
+        <h3 style={{ color: "#64ffda" }}>Mission</h3>
+        <hr />
+        <p>
+          We have very good Missions to solve daily life problems!! use of inote
+          can be done differently some people can use to note something secure
+          or private note and some people to use to note to-do list or some of
+          them can use to note food recipe 😋. So the use of ÍÑotes can be done
+          anyway. Use of ÍÑotes depends on own totally on you just make sure or
+          how you can make use of it.
+        </p>
       </div>
     </div>
   );
