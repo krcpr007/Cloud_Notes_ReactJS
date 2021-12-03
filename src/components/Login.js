@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-const host = "http://localhost:5000";
+
 export const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${host}/api/auth/login`, {
+    const response = await fetch(`${process.env.REACT_APP_PORT_VALUE}/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
