@@ -10,7 +10,7 @@ const Alert = (props) => {
   };
 
   return (
-    <div className="mt-5 fixed-top" style={{ height: "50px" }}>
+    <div className="mt-5 fixed-top " style={{ height: "50px" }}>
       {props.alert && (
         <div
           className={`alert alert-${props.alert.type} alert-dismissible fade show`}
