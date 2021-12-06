@@ -3,7 +3,7 @@ import NoteContext from "./NoteContext";
 import { useState } from "react";
 const NoteState = (props) => {
   const host = "http://localhost:5000"
-  const notesInitial = []
+  const notesInitial = [];
   const [notes, setNotes] = useState(notesInitial)
  
   // Get all Notes
@@ -13,7 +13,7 @@ const NoteState = (props) => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEzZDRkOWM1MDU4MDcxNGU4ZGVkNDFlIn0sImlhdCI6MTYzMTQwNzUxNn0.vMI1Ck0cXSu6n5cW-tqUY0BFPWQcMU2XAcIkVbO_vx8"
+        "auth-token": localStorage.getItem('auth-token')
       }
     });
     const json = await response.json() 
@@ -28,7 +28,7 @@ const NoteState = (props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEzZDRkOWM1MDU4MDcxNGU4ZGVkNDFlIn0sImlhdCI6MTYzMTQwNzUxNn0.vMI1Ck0cXSu6n5cW-tqUY0BFPWQcMU2XAcIkVbO_vx8"
+        "auth-token": localStorage.getItem('auth-token')
       },
       body: JSON.stringify({title, description, tag})
     });
@@ -44,7 +44,7 @@ const NoteState = (props) => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEzZDRkOWM1MDU4MDcxNGU4ZGVkNDFlIn0sImlhdCI6MTYzMTQwNzUxNn0.vMI1Ck0cXSu6n5cW-tqUY0BFPWQcMU2XAcIkVbO_vx8"
+        "auth-token": localStorage.getItem('auth-token')
       }
     });
     const json = response.json(); 
@@ -60,7 +60,7 @@ const NoteState = (props) => {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjEzZDRkOWM1MDU4MDcxNGU4ZGVkNDFlIn0sImlhdCI6MTYzMTQwNzUxNn0.vMI1Ck0cXSu6n5cW-tqUY0BFPWQcMU2XAcIkVbO_vx8"
+        "auth-token": localStorage.getItem('auth-token')
       },
       body: JSON.stringify({title, description, tag})
     });
