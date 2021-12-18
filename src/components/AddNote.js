@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import NoteContext from "../context/NoteContext";
-const AddNote = () => {
+const AddNote = (props) => {
   const context = useContext(NoteContext);
   const { addNote } = context;
 
@@ -11,14 +11,15 @@ const AddNote = () => {
     console.log("working");
     addNote(note.title, note.description, note.tag);
     setNote({ title: "", description: "", tag: "" });
+    props.showAlert("Added successfully","success")
   };
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
   };
   return (
-    <div className="container ">
+    <div  style={{marginTop:"100px"}} className="container">
       <div style={{ color: "#64ffda" }}>
-        <h1 className="mt-5">Add a Note </h1>
+        <h1 className="">Add a Note </h1>
         <form>
           <div className="mb-3">
             <label htmlFor="title" className="form-label">
@@ -34,7 +35,7 @@ const AddNote = () => {
               aria-describedby="emailHelp"
               name="title"
               onChange={onChange}
-              minLength={5}
+              minLength={3}
               required
             />
             <div id="emailHelp" className="form-text">
@@ -74,7 +75,7 @@ const AddNote = () => {
             />
           </div>
           <button
-            disabled={note.title.length < 5 || note.description.length < 5}
+            disabled={note.title.length < 3 || note.description.length < 5}
             style={{ color: "#64ffda", backgroundColor: "#0a192f" }}
             type="submit"
             className="btn btn-success"
