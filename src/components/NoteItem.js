@@ -7,7 +7,7 @@ const NoteItem = (props) => {
   return (
     <div className="col-md-3 my-2">
       <div className="card">
-      <span   title="#tag" class="badge p-2 m-1  ">{note.tag.length===0?"Tag Not Entered":note.tag}</span>
+      <span   title="#tag" class="badge p-2 m-1 ">{note.tag.length===0?"Tag Not Mentioned":note.tag}</span>
         <div className="card-body">
           <div className="d-flex align-item-center">
             <h3 title="Note Title" className="card-title text-uppercase">{note.title}</h3>
